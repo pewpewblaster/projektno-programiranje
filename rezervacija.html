@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-daterangepicker/daterangepicker.css">
+    <title>Rezervacija termina</title>
+
+    <style>
+        .custom-button {
+            color: black;
+            background-color: transparent;
+            border-color: black;
+        }
+
+        .custom-button:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .col-md-10 h2 {
+            margin: 0.5em 0;
+            /* Prilagodite ovu vrijednost kako biste postigli željeni razmak */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <br><br>
+        <div class="row">
+            <div class="col-md-10 text-center d-flex flex-column align-items-center justify-content-center">
+                <h2>Rezervirajte svoj termin za šišanje u par jednostavnih koraka.</h2>
+                <p>Popunite formular, odaberite željenu uslugu i termin.</p>
+            </div>
+            <div class="col-md-2 d-flex align-items-end justify-content-end">
+                <img src="cutz_by_lenny_logo.png" alt="Slika" style="max-width: 100%; max-height: 100%;">
+            </div>
+        </div>
+        <br>
+        <div class="row" style="background-color: #D9D9D9;">
+            <div class="col-md-6">
+                <h3>Molimo ispunite obrazac:</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="ime">Ime:</label>
+                        <input type="text" class="form-control" id="ime" placeholder="Upis imena">
+                    </div>
+                    <div class="form-group">
+                        <label for="prezime">Prezime:</label>
+                        <input type="text" class="form-control" id="prezime" placeholder="Upis prezimena">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt">Email ili broj mobitela za potvrdu rezervacije:</label>
+                        <input type="text" class="form-control" id="kontakt" placeholder="Upis">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>&nbsp;</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="usluga">Usluga:</label>
+                        <input type="text" class="form-control" id="usluga" placeholder="Upis usluge">
+                    </div>
+                    <div class="form-group">
+                        <label for="referral">Referral code:</label>
+                        <input type="text" class="form-control" id="referral" placeholder="Upis">
+                    </div>
+                    <div class="form-group">
+                        <label for="napomena">Napomena:</label>
+                        <textarea class="form-control" id="napomena" rows="3" placeholder="Upis napomene"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row" >
+            <div class="col-md-6 text-center" style="background-color: #D9D9D9;">
+                <h3>Odaberite željeni datum:</h3>
+                <input type="text" id="daterange" class="form-control">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-daterangepicker/daterangepicker.min.js"></script>
+    <script>
+        // Pokretanje Date Range Pickera
+        $(function() {
+            $('#daterange').daterangepicker({
+                opens: 'left', // Prikaži kalendar s lijeve strane input polja
+                autoUpdateInput: false, // Onemogući automatsko ažuriranje input polja
+                locale: {
+                    cancelLabel: 'Odustani', // Promjena teksta gumba "Odustani"
+                    applyLabel: 'Odaberi', // Promjena teksta gumba "Odaberi"
+                    daysOfWeek: ['Ned', 'Pon', 'Uto', 'Sri', 'Čet', 'Pet', 'Sub'], // Promjena kratkih naziva dana u tjednu
+                    monthNames: [
+                        'Siječanj',
+                        'Veljača',
+                        'Ožujak',
+                        'Travanj',
+                        'Svibanj',
+                        'Lipanj',
+                        'Srpanj',
+                        'Kolovoz',
+                        'Rujan',
+                        'Listopad',
+                        'Studeni',
+                        'Prosinac'
+                    ] // Promjena naziva mjeseci
+                }
+            });
+
+            // Kada je odabran datum, ažurirajte vrijednost input polja
+            $('#daterange').on('apply.daterangepicker', function(ev, picker) {
+                $(this).val(picker.startDate.format('DD.MM.YYYY') + ' - ' + picker.endDate.format('DD.MM.YYYY'));
+            });
+        });
+    </script>
+</body>
+
+</html>
