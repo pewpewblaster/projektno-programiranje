@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Web Shop</title>
+
+    <style>
+        .custom-button {
+            color: black;
+            background-color: transparent;
+            border-color: black;
+        }
+
+        .custom-button:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .col-md-10 h2 {
+            margin: 0.5em 0;
+            /* Prilagodite ovu vrijednost kako biste postigli željeni razmak */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <br><br>
+        <div class="row">
+            <div class="col-md-10 text-center d-flex flex-column align-items-center justify-content-center">
+                <h2>Dobrodošli u naš web shop!</h2>
+                <p>Povratak na <a href="index.html">početnu stranicu</a>.</p>
+            </div>
+            <div class="col-md-2 d-flex align-items-end justify-content-end">
+                <img src="cutz_by_lenny_logo.png" alt="Logo" style="max-width: 100%; max-height: 100%;">
+            </div>
+        </div>
+        <br>
+        <div class="row" style="padding: 50px 0px 50px 0px;">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/artikl1.jpg" alt="Artikl 1">
+                    <div class="card-body">
+                        <h5 class="card-title">V's Tonic - 250ml</h5>
+                        <p class="card-text">Tonic za kožu <br>18.00 €</p>
+                        <button class="btn btn-primary" onclick="dodajUKosaricu('Vs Tonic - 250ml', 18.00)">Dodaj u košaricu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/artikl2.jpg" alt="Artikl 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Reuzel Fiber Gel</h5>
+                        <p class="card-text">Gel za kosu <br>15.50 €</p>
+                        <button class="btn btn-primary" onclick="dodajUKosaricu('Reuzel Fiber Gel', 15.50)">Dodaj u košaricu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/artikl3.jpg" alt="Artikl 3">
+                    <div class="card-body">
+                        <h5 class="card-title">V's Shaving Face Kit</h5>
+                        <p class="card-text">Komplet za brijanje <br>45.00 €</p>
+                        <button class="btn btn-primary" onclick="dodajUKosaricu('Vs Shaving Face Kit', 45.00)">Dodaj u košaricu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom: 50px;">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/artikl4.jpg" alt="Artikl 1">
+                    <div class="card-body">
+                        <h5 class="card-title">V's Shave Cream</h5>
+                        <p class="card-text">Pjena za brijanje <br>12.00 €</p>
+                        <button class="btn btn-primary" onclick="dodajUKosaricu('V Shave Cream', 12.00)">Dodaj u košaricu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/artikl5.jpg" alt="Artikl 2">
+                    <div class="card-body">
+                        <h5 class="card-title">V's Shave Prep</h5>
+                        <p class="card-text">Priprema za brijanje<br>10.00 €</p>
+                        <button class="btn btn-primary" onclick="dodajUKosaricu('V Shave Prep', 10.00)">Dodaj u košaricu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/artikl6.jpg" alt="Artikl 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Reuzel Matt Styling Paste</h5>
+                        <p class="card-text">Styling pasta za kosu <br>16.50 €</p>
+                        <button class="btn btn-primary" onclick="dodajUKosaricu('Reuzel Matt Styling Paste', 16.50)">Dodaj u košaricu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/artikl7.jpg" alt="Artikl 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Reuzel Wood & Spice Aftershave</h5>
+                        <p class="card-text">Tekućina nakon brijanja <br>12.30 €</p>
+                        <button class="btn btn-primary" onclick="dodajUKosaricu('Reuzel Wood & Spice Aftershave', 12.30)">Dodaj u košaricu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/artikl8.jpg" alt="Artikl 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Suavecito Men's Body Wash</h5>
+                        <p class="card-text">Suavecito gel za tuširanje <br>6.99 €</p>
+                        <button class="btn btn-primary" onclick="dodajUKosaricu('Suavecito Men\'s Body Wash', 6.99)">Dodaj u košaricu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="images/artikl9.jpg" alt="Artikl 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Suavecito Body Powder</h5>
+                        <p class="card-text">Krema za tijelo <br>8.99 €</p>
+                        <button class="btn btn-primary" onclick="dodajUKosaricu('Suavecito Body Powder', 8.99)">Dodaj u košaricu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center" style="margin-top:40px">
+            <button type="button" class="btn btn-primary" onclick="prikaziKosaricu()">Idi na košaricu</button>
+        </div>
+    </div>
+    <footer style="background-color: #f8f9fa; padding: 20px; margin-top: 100px;" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Cut'z by Lenny</h4>
+                    <p>Adresa:</p>
+                    <p> Hektorovićeva 2</p>
+                    <p> 10000 Zagreb</p>
+                    <p>Kontakt broj:  +385 99 365 0710</p>
+                </div>
+                <div class="col-md-6">
+                    <div id="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11125.738060837699!2d15.99246765!3d45.802555600000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d64fb12e7b75%3A0x5dfff4bf68b3dd66!2sHektorovi%C4%87eva%20ul.%202%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1686821635855!5m2!1shr!2shr" width="100%" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="modal fade" id="kosaricaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Košarica</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="kosaricaSadrzaj">
+                <!-- Ovdje će se prikazati sadržaj košarice -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="isprazniKosaricu()">Isprazni košaricu</button>
+                <button type="button" class="btn btn-primary" onclick="idiNaNaplatu()">Idi na naplatu</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Zatvori</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var kosarica = [];
+
+    function dodajUKosaricu(artikl, cijena) {
+        kosarica.push({ artikl: artikl, cijena: cijena });
+        console.log("Dodan u košaricu: " + artikl);
+    }
+
+    function prikaziKosaricu() {
+        var kosaricaSadrzajElement = document.getElementById("kosaricaSadrzaj");
+        kosaricaSadrzajElement.innerHTML = "";
+
+        if (kosarica.length === 0) {
+            kosaricaSadrzajElement.innerHTML = "Košarica je prazna.";
+        } else {
+            for (var i = 0; i < kosarica.length; i++) {
+                var artikl = kosarica[i].artikl;
+                var cijena = kosarica[i].cijena;
+                var redak = "<p>" + artikl + " - " + cijena.toFixed(2) + " €  <button class='btn btn-danger obrisi-artikl' onclick='obrisiArtikl(" + i + ")'>Obriši</button></p>";
+                kosaricaSadrzajElement.innerHTML += redak;
+            }
+        }
+
+        $('#kosaricaModal').modal('show');
+    }
+
+    function obrisiArtikl(index) {
+        kosarica.splice(index, 1);
+        prikaziKosaricu();
+    }
+
+    function isprazniKosaricu() {
+        kosarica = [];
+        prikaziKosaricu();
+    }
+    
+    function idiNaNaplatu() {
+        // Ovdje možete dodati svoj kod za prijelaz na stranicu za naplatu
+        console.log("Idi na naplatu");
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
