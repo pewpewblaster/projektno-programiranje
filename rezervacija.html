@@ -149,14 +149,7 @@
 
         function procesirajRezervaciju() {
             var načinPlaćanja = document.getElementById("nacin-placanja").value;
-
-            if (načinPlaćanja === "kartica") {
-                // Preusmjeravanje na testnu stranicu za naplatu
-                window.location.href = "https://www.example.com/naplata";
-            } else {
-                // Prikazivanje modalnog prozora s potvrdom rezervacije
-                $('#potvrdaModal').modal('show');
-            }
+            $('#potvrdaModal').modal('show');
         }
     </script>
 
